@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="style1.css">
 </head>
 <body class="light-mode">
@@ -38,7 +39,7 @@
             <div class="form-grid">
                 <div class="form-group">
                     <label class="form-label">Your Birth Date</label>
-                    <input type="date" class="form-input" id="birthDate" placeholder="Select your birth date">
+                    <input type="text" class="form-input" id="birthDate" placeholder="Select your birth date">
                 </div>
                 
                 <div class="form-group" style="align-self: end;">
@@ -52,7 +53,7 @@
             <div id="comparisonSection" class="hidden" style="margin-top: 1.5rem;">
                 <div class="form-group">
                     <label class="form-label">Let’s settle the age debate once and for all. Who’s older?</label>
-                    <input type="date" class="form-input" id="secondBirthDate" placeholder="Compare with another date">
+                    <input type="text" class="form-input" id="secondBirthDate" placeholder="Compare with another date">
                 </div>
             </div>
         </div>
@@ -114,6 +115,18 @@
     <footer class="footer">
         &copy; Developed By ~ Shankar Prasad Pyke.
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        flatpickr("#birthDate", {
+            dateFormat: "Y-m-d",
+            maxDate: "today"
+        });
+
+        flatpickr("#secondBirthDate", {
+            dateFormat: "Y-m-d",
+            maxDate: "today"
+        });
+    </script>
     <script src="script1.js"></script>
 </body>
 </html>
