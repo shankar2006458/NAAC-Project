@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Age Calculator - Discover Your Life Journey</title>
+    <meta name="description" content="Calculate your exact age and discover fascinating insights about your life journey including zodiac signs, fun facts, and more!">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body class="light-mode">
+    <div id="loadingSpinner" class="spinner-overlay">
+    <div class="spinner-wrapper">
+        <div class="spinner"></div>
+        <p class="loading-text">Cranking the time machine... Hold Tight ⏳😂</p>
+    </div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <div class="header-top">
+                <div></div>
+                <h1 class="title">Age Calculator</h1>
+                <button class="mode-toggle" id="modeToggle">🌙</button>
+            </div>
+            <p class="subtitle">Discover your age and explore fascinating insights about your life journey</p>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <span style="font-size: 1.5rem;">📅</span>
+                <h2 class="card-title">Drop your birthday below. We promise not to judge (unless it's Feb 30) 😅</h2>
+            </div>
+            
+            <div class="form-grid">
+                <div class="form-group">
+                    <label class="form-label">Your Birth Date</label>
+                    <input type="date" class="form-input" id="birthDate" placeholder="Select your birth date">
+                </div>
+                
+                <div class="form-group" style="align-self: end;">
+                    <button class="btn" id="compareToggle" disabled>
+                        <span>👥</span>
+                        <span id="compareText">Show Age Comparison</span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="comparisonSection" class="hidden" style="margin-top: 1.5rem;">
+                <div class="form-group">
+                    <label class="form-label">Let’s settle the age debate once and for all. Who’s older?</label>
+                    <input type="date" class="form-input" id="secondBirthDate" placeholder="Compare with another date">
+                </div>
+            </div>
+        </div>
+
+        <div id="resultsSection" class="hidden">
+            <div class="card">
+                <div class="card-header">
+                    <span style="font-size: 1.5rem;">⏱️</span>
+                    <h2 class="card-title">🧓 You’ve Been Around for This Long... And Counting!</h2>
+                </div>
+                <div class="age-display-grid" id="ageDisplay"></div>
+            </div>
+
+            <div class="results-grid-2">
+                <div class="card">
+                    <div class="card-header">
+                        <span style="font-size: 1.5rem;">🔮</span>
+                        <h2 class="card-title">🌟 Your Cosmic Personality Report (AKA why you hate mornings)</h2>
+                    </div>
+                    <div id="zodiacInfo"></div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span style="font-size: 1.5rem;">🎂</span>
+                        <h2 class="card-title">Next Birthday</h2>
+                    </div>
+                    <div id="birthdayCountdown"></div>
+                </div>
+            </div>
+
+            <div id="ageComparisonCard" class="card hidden">
+                <div class="card-header">
+                    <span style="font-size: 1.5rem;">👥</span>
+                    <h2 class="card-title">Age Comparison</h2>
+                </div>
+                <div id="ageComparison"></div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span style="font-size: 1.5rem;">✨</span>
+                    <h2 class="card-title">Mind-Blowing Stats You Didn’t Ask For But Now Can’t Unsee 🤯</h2>
+                </div>
+                <div class="fun-facts-grid" id="funFacts"></div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span style="font-size: 1.5rem;">📅</span>
+                    <h2 class="card-title">Milestone Countdown</h2>
+                </div>
+            <div id="milestoneCountdown" style="text-align: center; padding: 1.5rem; font-size: 1rem;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="toastContainer" style="position: fixed; top: 1rem; right: 1rem; z-index: 9999;"></div>
+    <footer class="footer">
+        &copy; Developed By ~ Shankar Prasad Pyke.
+    </footer>
+    <script src="script1.js"></script>
+</body>
+</html>
